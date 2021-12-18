@@ -15,10 +15,10 @@ public class ArmLift extends Command{
     }
     protected void armUp(){
         double angle = Arm.getAngle();
-        Arm.setAngle(pos += 0.1);
+        Arm.setAngle(angle += 5);
     }
     protected void armDown(){
-        double pos = armMotor.getPosition();
-        armMotor.setPosition(pos -= 0.1);
+        double angle = Arm.getAngle();
+        Arm.setAngle(angle -= 5);
     }
 }
