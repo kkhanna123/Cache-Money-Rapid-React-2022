@@ -8,17 +8,11 @@ public class Arm extends Subsystem{
     @Override
     protected void initDefaultCommand() {
     }
-    protected void goToDefault(){
-        armMotor.setPosition(0.0);
+    public void goToDefault(){
+        armMotor.setAngle(0.0);
     }
-    protected void armUp(){
-        double pos = armMotor.getPosition();
-        armMotor.setPosition(pos += 0.1);
+    public void setAngle(double degrees){
+        armMotor.setAngle(degrees);
     }
-    protected void armDown(){
-        double pos = armMotor.getPosition();
-        armMotor.setPosition(pos -= 0.1);
-    }
-    
     
 }

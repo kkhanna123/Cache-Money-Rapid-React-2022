@@ -11,6 +11,8 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.subsystems.Arm;
+import frc.robot.subsystems.Lift;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.SampleSubsystem;
 import frc.robot.OI;
@@ -29,6 +31,8 @@ public class Robot extends TimedRobot {
   private static OI m_oi;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
   public static SampleSubsystem subsystem = new SampleSubsystem();
+  public static Arm arm = new Arm();
+  public static Lift lift = new Lift();
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -40,6 +44,7 @@ public class Robot extends TimedRobot {
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
     Robot.m_oi = new OI();
+    arm.goToDefault();
   }
 
   /**
@@ -90,6 +95,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+    
    
   }
 
