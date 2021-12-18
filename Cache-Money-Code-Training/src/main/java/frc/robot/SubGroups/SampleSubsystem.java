@@ -1,4 +1,4 @@
-package frc.robot.SubGroups;
+package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Command;
 
