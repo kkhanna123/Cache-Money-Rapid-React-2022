@@ -14,5 +14,7 @@ public class Arm extends Subsystem{
     public void setAngle(double degrees){
         armMotor.setAngle(degrees);
     }
-    
+    public void getAngle(){
+        return armMotor.getAngle();
+    }
 }

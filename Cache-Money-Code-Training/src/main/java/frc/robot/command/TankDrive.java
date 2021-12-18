@@ -37,7 +37,12 @@ public class TankDrive extends Command{
       return 21;
   }
   public static void move(){
-    double speed= Robot.m_
+    double speed= Robot.m_oi.getDriverRawAxis(RobotMap.LEFT_STICK_Y);
+    double turn= Robot.m_oi.getDriverRawAxis(RobotMap.RIGHT_STICK_Y);
+    //The Left is pos the right is neg
+    double right = speed + turn;
+    double left = speed - turn;
+    DriveTrain.move(left,right);
 
 
   }

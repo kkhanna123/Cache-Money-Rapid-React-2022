@@ -28,7 +28,7 @@ public class Robot extends TimedRobot {
   private static final String kDefaultAuto = "Default";
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
-  private static OI m_oi;
+  public static OI m_oi;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
   public static SampleSubsystem subsystem = new SampleSubsystem();
   public static Arm arm = new Arm();

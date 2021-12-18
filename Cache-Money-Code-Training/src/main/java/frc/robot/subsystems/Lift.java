@@ -24,6 +24,8 @@ public class Lift extends Subsystem{
         climbMotorRetract.set(ControlMode.PercentOutput, -1.0);
     }  
     
+    
+    
     public static void stopLiftMotor(){
         climbMotorRetract.set(ControlMode.PercentOutput, 0.0);
     }
