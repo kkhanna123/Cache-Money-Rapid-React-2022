@@ -5,8 +5,13 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.SubGroups.DriveTrain;
+import frc.robot.subsystems.SampleSubsystem;
 
 
 /**
@@ -20,6 +25,9 @@ public class Robot extends TimedRobot {
   private static final String kCustomAuto = "My Auto";
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
+  public static SampleSubsystem subsystem = new SampleSubsystem();
+  public static XboxController xbox = new XboxController(DriveTrain.DRIVERCONTROLLER);
+  public static JoystickButton BlueButton = new JoystickButton(xbox,DriveTrain.BUTTON_BLUE);
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -76,7 +84,7 @@ public class Robot extends TimedRobot {
   /** This function is called once when teleop is enabled. */
   @Override
   public void teleopInit() {}
-
+    BlueButton.whenPressed(SampleCommand.randAngle());
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {}
