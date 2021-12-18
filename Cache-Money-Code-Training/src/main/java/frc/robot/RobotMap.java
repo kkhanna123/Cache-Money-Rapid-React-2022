@@ -1,11 +1,11 @@
-package frc.robot.SubGroups;
+package frc.robot;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-public class DriveTrain {
-    //Drive train Id's
+public class RobotMap {
+     //Drive train Id's
   public static final int  MOTOR_LEFT_1_ID = 21;  
   public static final int  MOTOR_LEFT_2_ID = 22;
   public static final int  MOTOR_RIGHT_1_ID = 23;
@@ -28,23 +28,5 @@ public class DriveTrain {
   public final static int BUTTON_START = 8;
   public final static int BUTTON_LEFTSTICK = 9;
   public final static int BUTTON_RIGHTSTICK = 10;
-    //Button inputs
-    public static Joystick xbox = new Joystick(DRIVERCONTROLLER);
-    public static Joystick joystick = new Joystick(BUTTONCONTROLLER);
-    public static Button BlueButton = new JoystickButton(xbox,BUTTON_BLUE);
-    public static Button RedButton = new JoystickButton(xbox,BUTTON_RED);
-    public static Button GreenButton = new JoystickButton(xbox,BUTTON_GREEN);
-    public static Button YellowButton = new JoystickButton(xbox,BUTTON_YELLOW);
-    public static Button LeftBumpButton = new JoystickButton(xbox,BUTTON_LEFTBUMP);
-    public static Button RightBumpButton = new JoystickButton(xbox,BUTTON_RIGHTBUMP);
-    public static Button BackButton = new JoystickButton(xbox,BUTTON_BACK);
-    public static Button StartButton = new JoystickButton(xbox,BUTTON_START);
-    //Motor Variable setup
-    private static VictorSPX motorLeft1= new VictorSPX(MOTOR_LEFT_1_ID);
-    private static VictorSPX motorLeft2= new VictorSPX(MOTOR_LEFT_1_ID);
-    private static VictorSPX motorRight1= new VictorSPX(MOTOR_LEFT_1_ID);
-    private static VictorSPX motorRight2= new VictorSPX(MOTOR_LEFT_1_ID);
     
-
-
 }
